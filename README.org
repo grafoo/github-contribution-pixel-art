@@ -1,0 +1,21 @@
+* About
+Make some ASCII art with the yearly contributions div on your github profile page.
+
+* Usage
+1. Create an auxiliary repo for the dummy commits (e.g. ~grafoo/github-contribution-pixel-art-aux.git~).
+2. Check the maximum of contributions per day (darkest pixels) and note down that number.
+3. List the dates you'd like to use in a file (see e.g. ~hire_me.txt~)
+4. Run the generator e.g.
+#+BEGIN_SRC sh
+go run main.go hire_me.txt 'git@github.com:grafoo/github-contribution-pixel-art-aux.git' <maximum-contributions-per-day>
+#+END_SRC
+
+* Feature
+** TODO Create an editor for drawing the graphic instead of listing dates.
+
+* Reference
+** [[https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile][How github counts your contributions]]
+** Set date on git commit
+#+BEGIN_SRC sh
+man -P 'less -p "DATE FORMATS"' git commit
+#+END_SRC
